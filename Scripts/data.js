@@ -1,21 +1,24 @@
 function LoadGames(id,JsonFile){
   fetch(JsonFile)
-      .then(response => response.json())
-      .then(gameImages => {
-        const gameList = document.getElementById(id);
+      .then(response => response.json()) // On transforme la réponse en objet JS
+      .then(data => {
+        const gameList = document.getElementById(`${id}-games`);
+        
+        // On récupère la liste des images correspondant à ce personnage
+        const gameImages = data[id];
 
         gameImages.forEach(src => {
             const img = document.createElement("img");
             img.src = src;
-            img.alt = "Image du jeu Mario";
+            img.alt = `Jeu de ${id}`;
             gameList.appendChild(img);
         });
       })
     .catch(error => console.error("Erreur lors du chargement des jeux :", error));
 }
 
-LoadGames("mario-games", "../Data/mario-games.json");
-LoadGames("luigi-games", "../Data/luigi-games.json");
-LoadGames("peach-games", "../Data/peach-games.json");
-LoadGames("toad-games", "../Data/toad-games.json");
-LoadGames("bowser-games", "../Data/bowser-games.json");
+LoadGames("mario", "../Data/games.json");
+LoadGames("luigi", "../Data/games.json");
+LoadGames("peach", "../Data/games.json");
+LoadGames("toad", "../Data/games.json");
+LoadGames("bowser", "../Data/games.json");

@@ -1,0 +1,31 @@
+{
+    "mario": [
+        "Images/1x1_NSwitch_SuperMarioBrosWonder_image380w.jpg",
+        "Images/SQ_NSwitch_MarioKart8Deluxe_image380w.jpg",
+        "Images/SQ_NSwitch_SuperMarioOdyssey_Alt01_image380w.jpg"
+    ],
+
+    "luigi": [
+        "Images/SQ_NSwitch_LuigisMansion3_image380w.jpg",
+        "Images/1x1_NSwitch_LuigisMansion2HD_image380w.jpg",
+        "Images/1x1_NSwitch_MarioLuigiBrothership_Base_FR_fr_image380w.jpg"
+    ],
+
+    "peach": [
+        "Images/1x1_NSwitch_PrincessPeachShowtime_image380w.jpg",
+        "Images/1x1_NSwitch_SuperMarioBrosWonder_image380w.jpg",
+        "Images/1x1_NSwitch_SuperMarioRPG_image380w.jpg"
+    ],
+
+    "toad": [
+        "Images/SQ_NSwitch_CaptainToadTreasureTracker_image380w.jpg",
+        "Images/1x1_NSwitch_SuperMarioBrosWonder_image380w.jpg",
+        "Images/1x1_NSwitch_SuperMarioRPG_image380w.jpg"
+    ],
+
+    "bowser": [
+        "Images/SQ_NSwitch_SuperMario3DWorldAndBowsersFury_image380w.jpg",
+        "Images/SQ_NSwitch_SuperMarioOdyssey_Alt01_image380w.jpg",
+        "Images/1x1_NSwitch_SuperMarioRPG_image380w.jpg"
+    ]
+}
