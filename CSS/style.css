@@ -177,9 +177,9 @@ header{
 /* ---------------------- */
 .mariohub-characters-4,
 .mariohub-characters-5 {
-  position: absolute;
-  top: 281px;
-  object-fit: cover;
+    position: absolute;
+    top: 281px;
+    object-fit: cover;
 }
 
 .mariohub-characters-4 {
