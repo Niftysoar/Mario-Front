@@ -9,7 +9,10 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     background: linear-gradient(180deg, rgba(41, 171, 252, 1) 0%, rgba(140, 200, 238, 1) 100%);
-    /* background-image: url(../Images/MarioHub_Characters_Intro_bg.png); */
+}
+
+main{
+    background-image: url(../Images/MarioHub_Characters_Intro_bg.png);
 }
 
 /* ------------------- */
@@ -92,6 +95,15 @@ header{
     color: #fff;
     border-radius: 15px;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+    /* transition: height .2s; */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
 }
 
 .card-title {
@@ -102,11 +114,27 @@ header{
         5px 5px #000, -5px -5px #000, 5px -5px #000, -5px 5px #000;
 }
 
+/* Chevron rotation */
+.chevron-icon {
+  transition: transform 0.3s ease;
+}
+
+.card.closed .chevron-icon {
+  transform: rotate(-90deg);
+}
+
 .card-content {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 2rem;
+}
+
+.card.closed .card-content {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 1rem;
+  pointer-events: none;
 }
 
 .card-image {

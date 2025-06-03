@@ -9,157 +9,174 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-    <div class="top-bar"></div>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="/">Acceuil</a></li>
-                <li><a href="/">Personnages</a></li>
-                <li><a href="/">À propos</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main id="main-page">
+        <div class="top-bar"></div>
+        <header>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="/">Personnages</a></li>
+                    <li><a href="/">À propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <img class="mariohub-characters-4" src="Images/MarioHub_Characters_Intro_Luigi.png" alt="Luigi" />
-    <img class="mariohub-characters-5" src="Images/MarioHub_Characters_Intro_Mario.png" alt="Mario" />
+        <img class="mariohub-characters-4" src="Images/MarioHub_Characters_Intro_Luigi.png" alt="Luigi" />
+        <img class="mariohub-characters-5" src="Images/MarioHub_Characters_Intro_Mario.png" alt="Mario" />
 
-    <section class="characters-intro">
-        <h1 class="main-title">Personnages</h1>
-        <p class="subtitle">Decouvrez quelques-uns des celebres<br />habitants du Royaume Champignon !</p>
-    </section>
+        <section class="characters-intro">
+            <h1 class="main-title">Personnages</h1>
+            <p class="subtitle">Decouvrez quelques-uns des celebres<br />habitants du Royaume Champignon !</p>
+        </section>
 
-    <section class="character-sections">
-        <div class="card" id="card-mario">
-            <h2 class="card-title">Mario</h2>
+        <section class="character-sections">
+            <div class="card closed" id="card-mario">
+                <div class="card-header" onclick="toggleCard('card-mario')">
+                    <h2 class="card-title">Mario</h2>
+                    <span class="chevron">⯆</span>
+                </div>
 
-            <div class="card-content">
-                <img src="Images/MarioHub_Characters_CharBtn_Mario_on.png" alt="MarioOff" class="character-img">
+                <div class="card-content">
+                    <img src="Images/MarioHub_Characters_CharBtn_Mario_on.png" alt="MarioOff" class="character-img">
 
-                <div class="card-details">
-                    <div class="card-description">
-                        <p>C'est le principal héros du Royaume Champignon. Toujours souriant et joyeux, un seul coup d'œil suffit pour le reconnaître grâce à sa salopette bleue, sa casquette rouge et son inimitable moustache.</p><br>
-                        <p>Fidèle ami de la princesse Peach, lui et son frère Luigi sont connus partout pour leur courage.</p><br>
-                        <p>Plombier de métier, c'est en réalité un véritable touche-à-tout. Il est doué pour tous les sports, que ce soit le tennis, le golf, le baseball, le football et même le karting: Quel champion !</p><br>
-                        <p>Il utilise ses incroyables capacités de saut et ses diverses transformations pour lutter contre son ennemi juré Bowser.</p>
+                    <div class="card-details">
+                        <div class="card-description">
+                            <p>C'est le principal héros du Royaume Champignon. Toujours souriant et joyeux, un seul coup d'œil suffit pour le reconnaître grâce à sa salopette bleue, sa casquette rouge et son inimitable moustache.</p><br>
+                            <p>Fidèle ami de la princesse Peach, lui et son frère Luigi sont connus partout pour leur courage.</p><br>
+                            <p>Plombier de métier, c'est en réalité un véritable touche-à-tout. Il est doué pour tous les sports, que ce soit le tennis, le golf, le baseball, le football et même le karting: Quel champion !</p><br>
+                            <p>Il utilise ses incroyables capacités de saut et ses diverses transformations pour lutter contre son ennemi juré Bowser.</p>
+                        </div>
+                            
+                        <h3 class="card-subtitle">Selection de jeux avec Mario</h3>
+                        <div class="card-games" id="mario-games">
+                            <!-- Les jeux s'injecteront ici -->
+                        </div>
+
+                        <button href="#" class="card-button">
+                            <img src="Images/mario.png" alt="Mario Logo">En savoir plus sur Mario
+                        </button>
                     </div>
-                    
-                    <h3 class="card-subtitle">Selection de jeux avec Mario</h3>
-                    <div class="card-games" id="mario-games">
-                        <!-- Les jeux s'injecteront ici -->
-                    </div>
-
-                    <button href="#" class="card-button">
-                        <img src="Images/mario.png" alt="Mario Logo">En savoir plus sur Mario
-                    </button>
                 </div>
             </div>
-        </div>
 
-        <div class="card" id="card-luigi">
-            <h2 class="card-title">Luigi</h2>
+            <div class="card closed" id="card-luigi">
+                <div class="card-header" onclick="toggleCard('card-luigi')">
+                    <h2 class="card-title">Luigi</h2>
+                    <span class="chevron">⯆</span>
+                </div>
 
-            <div class="card-content">
-                <img src="Images/MarioHub_Characters_CharBtn_Luigi_On.png" alt="Luigi" class="character-img">
+                <div class="card-content">
+                    <img src="Images/MarioHub_Characters_CharBtn_Luigi_On.png" alt="Luigi" class="character-img">
 
-                <div class="card-details">
-                    <div class="card-description">
-                        <p>Frère de Mario et lui aussi héros du Royaume Champignon. Luigi est instantanément reconnaissable à sa casquette et sa chemise vertes.</p><br>
-                        <p>Luigi est très gentil mais parfois un peu nerveux, surtout s'il y a des fantômes dans le coin. Néanmoins, ses aptitudes égalent celles de Mario et quand les deux frères font équipe, rien ne leur est impossible.</p><br>
-                        <p>Luigi est plus grand que Mario et il peut sauter plus haut. Et si vous regardez de près, vous remarquerez que la forme de sa moustache est aussi légèrement différente.</p>
-                    </div>
-                    
-                    <h3 class="card-subtitle">Selection de jeux avec Luigi</h3>
-                    <div class="card-games" id="luigi-games">
-                        <!-- Les jeux s'injecteront ici -->
-                    </div>
+                    <div class="card-details">
+                        <div class="card-description">
+                            <p>Frère de Mario et lui aussi héros du Royaume Champignon. Luigi est instantanément reconnaissable à sa casquette et sa chemise vertes.</p><br>
+                            <p>Luigi est très gentil mais parfois un peu nerveux, surtout s'il y a des fantômes dans le coin. Néanmoins, ses aptitudes égalent celles de Mario et quand les deux frères font équipe, rien ne leur est impossible.</p><br>
+                            <p>Luigi est plus grand que Mario et il peut sauter plus haut. Et si vous regardez de près, vous remarquerez que la forme de sa moustache est aussi légèrement différente.</p>
+                        </div>
+                        
+                        <h3 class="card-subtitle">Selection de jeux avec Luigi</h3>
+                        <div class="card-games" id="luigi-games">
+                            <!-- Les jeux s'injecteront ici -->
+                        </div>
 
-                    <button href="#" class="card-button">
-                        <img src="Images/luigi.png" alt="Luigi Logo">En savoir plus sur Luigi
-                    </button>
-                </div> 
+                        <button href="#" class="card-button">
+                            <img src="Images/luigi.png" alt="Luigi Logo">En savoir plus sur Luigi
+                        </button>
+                    </div> 
+                </div>
             </div>
-        </div>
 
-        <div class="card" id="card-peach">
-            <h2 class="card-title">Peach</h2>
+            <div class="card" id="card-peach">
+                <div class="card-header" onclick="toggleCard('card-peach')">
+                    <h2 class="card-title">Peach</h2>
+                    <span class="chevron">⯆</span>
+                </div>
 
-            <div class="card-content">
-                <img src="Images/MarioHub_Characters_CharBtn_Peach_On.png" alt="Peach" class="character-img">
+                <div class="card-content">
+                    <img src="Images/MarioHub_Characters_CharBtn_Peach_On.png" alt="Peach" class="character-img">
 
-                <div class="card-details">
-                    <div class="card-description">
-                        <p>C'est la princesse bien-aimée du Royaume Champignon. D'une extrême gentillesse, son plus grand souhait est de créer un monde où chacun vivrait heureux. Elle porte le plus souvent une magnifique robe rose.</p><br>
-                        <p>Toujours prête à pratiquer toutes sortes d'activités, elle aime aussi cuisiner et faire de la pâtisserie.</p><br>
-                        <p>La princesse Peach et Mario sont de bons amis qui s'entraident à la moindre occasion.</p>
-                    </div>
-                    
-                    <h3 class="card-subtitle">Selection de jeux avec Peach</h3>
-                    <div class="card-games" id="peach-games">
-                        <!-- Les jeux s'injecteront ici -->
-                    </div>
+                    <div class="card-details">
+                        <div class="card-description">
+                            <p>C'est la princesse bien-aimée du Royaume Champignon. D'une extrême gentillesse, son plus grand souhait est de créer un monde où chacun vivrait heureux. Elle porte le plus souvent une magnifique robe rose.</p><br>
+                            <p>Toujours prête à pratiquer toutes sortes d'activités, elle aime aussi cuisiner et faire de la pâtisserie.</p><br>
+                            <p>La princesse Peach et Mario sont de bons amis qui s'entraident à la moindre occasion.</p>
+                        </div>
+                        
+                        <h3 class="card-subtitle">Selection de jeux avec Peach</h3>
+                        <div class="card-games" id="peach-games">
+                            <!-- Les jeux s'injecteront ici -->
+                        </div>
 
-                    <button href="#" class="card-button">
-                        <img src="Images/peach.png" alt="Peach Logo">En savoir plus sur Peach
-                    </button>
-                </div> 
+                        <button href="#" class="card-button">
+                            <img src="Images/peach.png" alt="Peach Logo">En savoir plus sur Peach
+                        </button>
+                    </div> 
+                </div>
             </div>
-        </div>
 
-        <div class="card" id="card-toad">
-            <h2 class="card-title">Toad</h2>
+            <div class="card" id="card-toad">
+                <div class="card-header" onclick="toggleCard('card-toad')">
+                    <h2 class="card-title">Toad</h2>
+                    <span class="chevron">⯆</span>
+                </div>
 
-            <div class="card-content">
-                <img src="Images/MarioHub_Characters_CharBtn_Toad_On.png" alt="Toad" class="character-img">
+                <div class="card-content">
+                    <img src="Images/MarioHub_Characters_CharBtn_Toad_On.png" alt="Toad" class="character-img">
 
-                <div class="card-details">
-                    <div class="card-description">
-                        <p>Adorable habitant du Royaume Champignon, on reconnaît Toad parmi ceux de son espèce grâce aux points rouges qui ornent sa tête, en effet certains peuvent arborer d'autres couleurs.</p><br>
-                        <p>Loyal et enjoué, il est au service de la princesse Peach et fait toujours de son mieux pour aider Mario et Luigi à protéger le Royaume Champignon contre Bowser. Courageux, Toad n'a jamais peur de se mettre en danger.</p>
-                    </div>
-                    
-                    <h3 class="card-subtitle">Selection de jeux avec Toad</h3>
-                    <div class="card-games" id="toad-games">
-                        <!-- Les jeux s'injecteront ici -->
-                    </div>
+                    <div class="card-details">
+                        <div class="card-description">
+                            <p>Adorable habitant du Royaume Champignon, on reconnaît Toad parmi ceux de son espèce grâce aux points rouges qui ornent sa tête, en effet certains peuvent arborer d'autres couleurs.</p><br>
+                            <p>Loyal et enjoué, il est au service de la princesse Peach et fait toujours de son mieux pour aider Mario et Luigi à protéger le Royaume Champignon contre Bowser. Courageux, Toad n'a jamais peur de se mettre en danger.</p>
+                        </div>
+                        
+                        <h3 class="card-subtitle">Selection de jeux avec Toad</h3>
+                        <div class="card-games" id="toad-games">
+                            <!-- Les jeux s'injecteront ici -->
+                        </div>
 
-                    <button href="#" class="card-button">
-                        <img src="Images/toad.png" alt="Toad Logo">En savoir plus sur Toad
-                    </button>
-                </div> 
+                        <button href="#" class="card-button">
+                            <img src="Images/toad.png" alt="Toad Logo">En savoir plus sur Toad
+                        </button>
+                    </div> 
+                </div>
             </div>
-        </div>
 
-        <div class="card" id="card-bowser">
-            <h2 class="card-title">Bowser</h2>
+            <div class="card" id="card-bowser">
+                <div class="card-header" onclick="toggleCard('card-bowser')">
+                    <h2 class="card-title">Bowser</h2>
+                    <span class="chevron">⯆</span>
+                </div>
 
-            <div class="card-content">
-                <img src="Images/MarioHub_Characters_CharBtn_Bowser_On.png" alt="Bowser" class="character-img">
+                <div class="card-content">
+                    <img src="Images/MarioHub_Characters_CharBtn_Bowser_On.png" alt="Bowser" class="character-img">
 
-                <div class="card-details">
-                    <div class="card-description">
-                        <p>Bowser est le roi des Koopas.<br> Il est surtout l'ennemi juré de Mario et passe son temps à attaquer le Royaume Champignon.</p><br>
-                        <p>Bowser a de nombreux sbires à sa solde comme les Koopas, les Goombas, les Bill Balles et les Maskass. Mais, quand il décide de s'en prendre au Royaume Champignon, ses plans sont déjoués par Mario et ses amis.</p><br>
-                        <p>Bowser est un adversaire redoutable qui possède une force incroyable et peut aussi cracher du feu.</p>
-                    </div>
-                    
-                    <h3 class="card-subtitle">Selection de jeux avec Bowser</h3>
-                    <div class="card-games" id="bowser-games">
-                        <!-- Les jeux s'injecteront ici -->
-                    </div>
+                    <div class="card-details">
+                        <div class="card-description">
+                            <p>Bowser est le roi des Koopas.<br> Il est surtout l'ennemi juré de Mario et passe son temps à attaquer le Royaume Champignon.</p><br>
+                            <p>Bowser a de nombreux sbires à sa solde comme les Koopas, les Goombas, les Bill Balles et les Maskass. Mais, quand il décide de s'en prendre au Royaume Champignon, ses plans sont déjoués par Mario et ses amis.</p><br>
+                            <p>Bowser est un adversaire redoutable qui possède une force incroyable et peut aussi cracher du feu.</p>
+                        </div>
+                        
+                        <h3 class="card-subtitle">Selection de jeux avec Bowser</h3>
+                        <div class="card-games" id="bowser-games">
+                            <!-- Les jeux s'injecteront ici -->
+                        </div>
 
-                    <button href="#" class="card-button">
-                        <img src="Images/bowser.png" alt="Bowser Logo">En savoir plus sur Bowser
-                    </button>
-                </div> 
+                        <button href="#" class="card-button">
+                            <img src="Images/bowser.png" alt="Bowser Logo">En savoir plus sur Bowser
+                        </button>
+                    </div> 
+                </div>
             </div>
-        </div>
 
-        <img
-            class="mariohub-characters-3"
-            src="Images/MarioHub_Characters_artwork_chars_mob.png"
-            alt="Groupe de personnages Mario"
-        />
-    </section>
+            <img
+                class="mariohub-characters-3"
+                src="Images/MarioHub_Characters_artwork_chars_mob.png"
+                alt="Groupe de personnages Mario"
+            />
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -170,7 +187,7 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
-                
+                    
             <p class="footer-links">
                 Politiques de confidentialité | Conditions d’utilisation
             </p>
@@ -181,6 +198,7 @@
         </div>
     </footer>
     
+    <script src="Scripts/CharacterCard.js"></script>
     <script src="Scripts/script.js"></script>
     <script src="Scripts/data.js"></script>
 </body>
