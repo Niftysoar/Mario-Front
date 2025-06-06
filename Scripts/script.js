@@ -1,4 +1,5 @@
-function toggleCard(cardId) {
-  const card = document.getElementById(cardId);
-  card.classList.toggle("closed");
+function toggleCard(id) {
+  const card = document.getElementById(id);
+  card.classList.toggle('open');
+  card.classList.toggle('closed');
 }
