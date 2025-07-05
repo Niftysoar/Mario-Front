@@ -197,6 +197,7 @@ header{
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1.2rem;
+    max-width: 285px;
     border-radius: 25px;
     font-size: 100%;
     font-weight: bold;
@@ -214,13 +215,44 @@ header{
     color: #fff;
 }
 
+/* ----------------------------------------------- */
+/* IMAGES HEADER ET CONTENT AFFICHES SELON L'ETAT */
+/* ----------------------------------------------- */
+.card.closed .character-img {
+  display: none;
+}
+
+.card:not(.closed) .closed-img {
+  display: none;
+}
+
+.card.closed .closed-img {
+  display: block;
+}
+
+.card:not(.closed) .card-content {
+    max-height: 2000px; /* assez grand pour tout afficher */
+}
+
+.card.open {
+    outline: 2px solid #fff;
+}
+
+.closed{
+    height: 280px;
+}
+
+.closed-img {
+  height: 100%;
+}
+
 /* ---------------------- */
 /* IMAGES DES PERSONNAGES */
 /* ---------------------- */
 .mario-img,
 .luigi-img {
     position: absolute;
-    top: 280px;
+    top: 60px;
     object-fit: contain;
     max-width: 100%;
     height: auto;
@@ -252,8 +284,7 @@ header{
   .luigi-img {
     position: relative;
     display: inline-block;
-    width: 45vw;
-    max-width: 220px;
+    width: 50vw;
     margin: 1rem auto;
     height: auto;
     margin: 0 -10vw;
@@ -330,40 +361,77 @@ footer {
 /* ---------- */
 /* RESPONSIVE */
 /* ---------- */
+@media only screen and (max-width: 600px) {
+    .character-sections {
+        margin-top: -38px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .characters-sections {
+        margin: -50px auto 28px;
+        margin-top: -50px;
+    }
+}
+
 @media (max-width: 768px) {
     .main-title {
         font-size: 48px;
+        text-shadow: 4px 0 #000, -4px 0 #000, 0 4px #000, 0 -4px #000,
+            4px 4px #000, -4px -4px #000, 4px -4px #000, -4px 4px #000;
     }
 
     .subtitle {
-        font-size: 24px;
+        font-size: 17px;
+        text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+            2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
     }
 
     .character-section {
         padding: 15px;
     }
+
+    .card{
+        margin-bottom: 16px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .card:not(.closed) .card-content {
+        max-height: 2500px; /* assez grand pour tout afficher */
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-details {
+        width: 100%;
+    }
+
+    .card-games {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .card-games img {
+        height: 200px;
+        padding: 4px;
+    }
+
+    .card-button {
+        /* 👇 Centre le bouton */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
 }
 
-
-
-/* Images header et content affichées selon l’état */
-.card.closed .character-img {
-  display: none;
-}
-.card:not(.closed) .closed-img {
-  display: none;
-}
-.card.closed .closed-img {
-  display: block;
-}
-.card:not(.closed) .card-content {
-  max-height: 2000px; /* assez grand pour tout afficher */
-}
-
-.closed{
-    height: 280px;
-}
-
-.closed-img {
-  height: 100%;
+@media only screen and (max-width: 1050px) {
+    .card {
+        padding: 1rem 35px;
+    }
 }
