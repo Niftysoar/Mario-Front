@@ -1,31 +1,31 @@
 {
     "mario": [
-        "Images/NSwitch_SuperMarioBrosWonder.jpg",
-        "Images/NSwitch_MarioKart8Deluxe.jpg",
-        "Images/NSwitch_SuperMarioOdyssey.jpg"
+        "Assets/Images/NSwitch_SuperMarioBrosWonder.jpg",
+        "Assets/Images/NSwitch_MarioKart8Deluxe.jpg",
+        "Assets/Images/NSwitch_SuperMarioOdyssey.jpg"
     ],
 
     "luigi": [
-        "Images/NSwitch_LuigisMansion3.jpg",
-        "Images/NSwitch_LuigisMansion2HD.jpg",
-        "Images/NSwitch_MarioLuigiBrothership.jpg"
+        "Assets/Images/NSwitch_LuigisMansion3.jpg",
+        "Assets/Images/NSwitch_LuigisMansion2HD.jpg",
+        "Assets/Images/NSwitch_MarioLuigiBrothership.jpg"
     ],
 
     "peach": [
-        "Images/NSwitch_PrincessPeachShowtime.jpg",
-        "Images/NSwitch_SuperMarioBrosWonder.jpg",
-        "Images/NSwitch_SuperMarioRPG.jpg"
+        "Assets/Images/NSwitch_PrincessPeachShowtime.jpg",
+        "Assets/Images/NSwitch_SuperMarioBrosWonder.jpg",
+        "Assets/Images/NSwitch_SuperMarioRPG.jpg"
     ],
 
     "toad": [
-        "Images/NSwitch_CaptainToadTreasureTracker.jpg",
-        "Images/NSwitch_SuperMarioBrosWonder.jpg",
-        "Images/NSwitch_SuperMarioRPG.jpg"
+        "Assets/Images/NSwitch_CaptainToadTreasureTracker.jpg",
+        "Assets/Images/NSwitch_SuperMarioBrosWonder.jpg",
+        "Assets/Images/NSwitch_SuperMarioRPG.jpg"
     ],
 
     "bowser": [
-        "Images/NSwitch_SuperMario3DWorldAndBowsersFury.jpg",
-        "Images/NSwitch_SuperMarioOdyssey.jpg",
-        "Images/NSwitch_SuperMarioRPG.jpg"
+        "Assets/Images/NSwitch_SuperMario3DWorldAndBowsersFury.jpg",
+        "Assets/Images/NSwitch_SuperMarioOdyssey.jpg",
+        "Assets/Images/NSwitch_SuperMarioRPG.jpg"
     ]
 }
