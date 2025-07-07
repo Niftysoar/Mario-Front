@@ -44,8 +44,10 @@ header{
 }
 
 .nav-links {
-    list-style: none;
+    align-items: center;
     display: flex;
+    justify-content: center;
+    list-style: none;
     gap: 50px;
 }
 
@@ -53,6 +55,49 @@ header{
     text-decoration: none;
     color: #fff;
     position: relative;
+}
+
+.nintendo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Effet au survol */
+.nintendo-btn:hover {
+    background-color: #e60012;
+    border: 2px solid #fff;
+}
+
+.nintendo-btn::before,
+.nintendo-btn::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.nintendo-btn::before {
+    top: 5px;
+    left: 5px;
+}
+
+.nintendo-btn::after {
+    bottom: 5px;
+    right: 5px;
+}
+
+.nintendo-btn:hover::before,
+.nintendo-btn:hover::after {
+    opacity: 1;
 }
 
 /* -------------------- */
