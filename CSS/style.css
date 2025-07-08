@@ -100,6 +100,70 @@ header{
     opacity: 1;
 }
 
+/* ------------------- */
+/* MENU BURGER + MOBILE */
+/* ------------------- */
+
+.burger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+}
+
+/* Menu mobile */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    inset: 0;
+    background-image: url(../Assets/Images/MarioHub_Characters_bg_stripes.jpg);
+    z-index: 999;
+}
+
+.mobile-menu a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+        padding-right: 2rem;
+    }
+}
+
 /* -------------------- */
 /* TITRE / HERO SECTION */
 /* -------------------- */
@@ -179,7 +243,7 @@ header{
 }
 
 /* Rotation si ouvert */
-.card.open .card-title::after {
+.card:not(.closed) .card-title::after {
     transform: rotate(180deg);
 }
 
@@ -189,7 +253,6 @@ header{
     justify-content: center;
     gap: 2rem;
     max-height: 0;
-    overflow: hidden;
     transition: max-height 0.8s ease;
 }
 
@@ -283,7 +346,7 @@ header{
     max-height: 2000px; /* assez grand pour tout afficher */
 }
 
-.card.open {
+.card:not(.closed) {
     outline: 3px solid #fff;
 }
 
@@ -437,13 +500,13 @@ footer {
         text-align: center;
     }
 
-    .card-header img {
-        max-width: 100%;
-    }
-
     .card-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .character-img{
+        max-width: 100%;
     }
 
     .card-games {

@@ -17,3 +17,9 @@ function toggleCard(cardId) {
       }, 300); // Ajustable selon ta préférence
     }
 }
+
+
+function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
+}

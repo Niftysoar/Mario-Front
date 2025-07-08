@@ -13,12 +13,21 @@
         <div class="top-bar"></div>
         <header>
             <nav class="navbar">
+                <div class="burger" onclick="toggleMenu()">☰</div>
                 <ul class="nav-links">
                     <li><a href="/" class="nintendo-btn">Accueil</a></li>
                     <li><a href="/" class="nintendo-btn">À propos</a></li>
                     <li><a href="/" class="nintendo-btn">Personnages</a></li> 
                 </ul>
             </nav>
+
+            <!-- Menu mobile -->
+            <div class="mobile-menu" id="mobileMenu">
+                <button class="close-btn" onclick="toggleMenu()">✖</button>
+                <a href="/" class="nintendo-btn">Accueil</a>
+                <a href="/" class="nintendo-btn">À propos</a>
+                <a href="/" class="nintendo-btn">Personnages</a>
+            </div>
         </header>
 
         <section class="characters-intro">
