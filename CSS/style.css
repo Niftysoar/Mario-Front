@@ -24,13 +24,24 @@ main{
 /* HEADER & NAVIGATION */
 /* ------------------- */
 .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 60px;
     background-color: #E60012;
+    padding: 0.5rem 1.5rem;
+}
+
+.nintendo-logo {
+    height: 24px;
+    width: auto;
 }
 
 header{
-    position: relative;
+    position: sticky;
+    top: 0;
     padding: 0 2rem;
+    z-index: 1000;
     background-image: url(../Assets/Images/MarioHub_Characters_bg_stripes.jpg);
 }
 
@@ -179,17 +190,42 @@ header{
 /* TITRE / HERO SECTION */
 /* -------------------- */
 .characters-intro {
+    position: relative;
     text-align: center;
     font-family: "Super Mario 256", sans-serif;
     color: white;
-    margin: 2rem auto;
-    padding: 2rem 1rem;
-    max-width: 800px;
+    padding: 4rem 1rem;
+    max-width: 100%;
+    height: 500px;
+    gap: 2rem;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Effet vague en bas */
+  clip-path: path("M0,0 L0,430 Q75,450 150,430 T300,430 T450,430 T600,430 T750,430 T900,430 T1050,430 T1200,430 T1350,430 T1500,430 T1650,430 T1800,430 L1800,0 Z");
+}
+
+.intro-text {
+    position: relative;
+    z-index: 1;
 }
 
 .main-title {
     font-size: 72px;
-    margin-bottom: 1rem;
     text-shadow: 7px 0 #000, -7px 0 #000, 0 7px #000, 0 -7px #000,
         7px 7px #000, -7px -7px #000, 7px -7px #000, -7px 7px #000;
 }
@@ -237,6 +273,15 @@ header{
     margin: 0 auto;
     text-shadow: 5px 0 #000, -5px 0 #000, 0 5px #000, 0 -5px #000,
         5px 5px #000, -5px -5px #000, 5px -5px #000, -5px 5px #000;
+}
+
+.card-dark-title {
+    font-family: "Super Mario 256", sans-serif;
+    font-size: 64px;
+    margin: 0 auto;
+    color: black;
+    text-shadow: 5px 5px 0 white, -5px -5px 0 white, 5px -5px 0 white,
+        -5px 5px 0 white, 5px 0 0 white, -5px 0 0 white, 0 5px 0 white, 0 -5px 0 white;
 }
 
 /* Chevron */
@@ -379,6 +424,7 @@ header{
     object-fit: contain;
     max-width: 100%;
     height: auto;
+    z-index: 0;
 }
 
 .mario-img {
@@ -411,11 +457,9 @@ header{
     margin: 1rem auto;
     height: auto;
     margin: 0 -10vw;
-    z-index: 1;
   }
 
   .mario-img {
-    z-index: 2; /* Mario au-dessus de Luigi */
     left: 30%;
   }
 
@@ -488,7 +532,19 @@ footer {
     .character-sections {
         margin-top: -38px;
     }
+    .main-title {
+        font-size: 32px;
+        text-shadow: 4px 0 #000, -4px 0 #000, 0 4px #000, 0 -4px #000,
+            4px 4px #000, -4px -4px #000, 4px -4px #000, -4px 4px #000;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+            2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+    }
 }
+
 @media only screen and (max-width: 767px) {
     .characters-sections {
         margin: -50px auto 28px;
@@ -555,5 +611,19 @@ footer {
 
     .card-title {
         font-size: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .card-title {
+        font-size: 40px;
     }
 }
